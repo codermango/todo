@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TodoInput /> renders correctly 1`] = `
+TodoInput {
+  "context": Object {},
+  "handleChange": [Function],
+  "handleKeyUp": [Function],
+  "props": Object {
+    "addTodo": [MockFunction],
+  },
+  "refs": Object {},
+  "setState": [Function],
+  "state": Object {
+    "value": "",
+  },
+  "updater": Updater {
+    "_callbacks": Array [],
+    "_renderer": ReactShallowRenderer {
+      "_context": Object {},
+      "_didScheduleRenderPhaseUpdate": false,
+      "_dispatcher": Object {
+        "readContext": [Function],
+        "useCallback": [Function],
+        "useContext": [Function],
+        "useDebugValue": [Function],
+        "useEffect": [Function],
+        "useImperativeHandle": [Function],
+        "useLayoutEffect": [Function],
+        "useMemo": [Function],
+        "useReducer": [Function],
+        "useRef": [Function],
+        "useState": [Function],
+      },
+      "_element": <TodoInput
+        addTodo={[MockFunction]}
+      />,
+      "_firstWorkInProgressHook": null,
+      "_forcedUpdate": false,
+      "_instance": [Circular],
+      "_isReRender": false,
+      "_newState": null,
+      "_numberOfReRenders": 0,
+      "_renderPhaseUpdates": null,
+      "_rendered": <div
+        className="todoInput"
+      >
+        <input
+          className="input"
+          data-test-id="todo-input"
+          onChange={[Function]}
+          onKeyUp={[Function]}
+          type="text"
+          value=""
+        />
+      </div>,
+      "_rendering": false,
+      "_updater": [Circular],
+      "_workInProgressHook": null,
+    },
+  },
+}
+`;

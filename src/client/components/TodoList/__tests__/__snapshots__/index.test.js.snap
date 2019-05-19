@@ -1,0 +1,126 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TodoList /> renders correctly 1`] = `
+TodoList {
+  "context": Object {},
+  "draggedItem": null,
+  "handleDragOver": [Function],
+  "handleDragStart": [Function],
+  "props": Object {
+    "todos": Array [
+      Object {
+        "done": false,
+        "id": "id1",
+        "text": "text1",
+      },
+      Object {
+        "done": false,
+        "id": "id2",
+        "text": "text2",
+      },
+      Object {
+        "done": false,
+        "id": "id3",
+        "text": "text3",
+      },
+    ],
+    "updateAll": [MockFunction],
+  },
+  "refs": Object {},
+  "setState": [Function],
+  "state": null,
+  "updater": Updater {
+    "_callbacks": Array [],
+    "_renderer": ReactShallowRenderer {
+      "_context": Object {},
+      "_didScheduleRenderPhaseUpdate": false,
+      "_dispatcher": Object {
+        "readContext": [Function],
+        "useCallback": [Function],
+        "useContext": [Function],
+        "useDebugValue": [Function],
+        "useEffect": [Function],
+        "useImperativeHandle": [Function],
+        "useLayoutEffect": [Function],
+        "useMemo": [Function],
+        "useReducer": [Function],
+        "useRef": [Function],
+        "useState": [Function],
+      },
+      "_element": <TodoList
+        todos={
+          Array [
+            Object {
+              "done": false,
+              "id": "id1",
+              "text": "text1",
+            },
+            Object {
+              "done": false,
+              "id": "id2",
+              "text": "text2",
+            },
+            Object {
+              "done": false,
+              "id": "id3",
+              "text": "text3",
+            },
+          ]
+        }
+        updateAll={[MockFunction]}
+      />,
+      "_firstWorkInProgressHook": null,
+      "_forcedUpdate": false,
+      "_instance": [Circular],
+      "_isReRender": false,
+      "_newState": null,
+      "_numberOfReRenders": 0,
+      "_renderPhaseUpdates": null,
+      "_rendered": <div
+        className="todoList"
+        data-test-id="todo-list"
+      >
+        <TodoItem
+          data={
+            Object {
+              "done": false,
+              "id": "id1",
+              "text": "text1",
+            }
+          }
+          draggable={true}
+          onDragOver={[Function]}
+          onDragStart={[Function]}
+        />
+        <TodoItem
+          data={
+            Object {
+              "done": false,
+              "id": "id2",
+              "text": "text2",
+            }
+          }
+          draggable={true}
+          onDragOver={[Function]}
+          onDragStart={[Function]}
+        />
+        <TodoItem
+          data={
+            Object {
+              "done": false,
+              "id": "id3",
+              "text": "text3",
+            }
+          }
+          draggable={true}
+          onDragOver={[Function]}
+          onDragStart={[Function]}
+        />
+      </div>,
+      "_rendering": false,
+      "_updater": [Circular],
+      "_workInProgressHook": null,
+    },
+  },
+}
+`;

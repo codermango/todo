@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TodoItem /> renders correctly 1`] = `
+TodoItem {
+  "context": Object {},
+  "handleDeleteTodo": [Function],
+  "handleDone": [Function],
+  "props": Object {
+    "data": Object {
+      "done": false,
+      "id": "id1",
+      "text": "text1",
+    },
+    "deleteTodo": [MockFunction],
+    "toggleTodo": [MockFunction],
+  },
+  "refs": Object {},
+  "setState": [Function],
+  "state": null,
+  "updater": Updater {
+    "_callbacks": Array [],
+    "_renderer": ReactShallowRenderer {
+      "_context": Object {},
+      "_didScheduleRenderPhaseUpdate": false,
+      "_dispatcher": Object {
+        "readContext": [Function],
+        "useCallback": [Function],
+        "useContext": [Function],
+        "useDebugValue": [Function],
+        "useEffect": [Function],
+        "useImperativeHandle": [Function],
+        "useLayoutEffect": [Function],
+        "useMemo": [Function],
+        "useReducer": [Function],
+        "useRef": [Function],
+        "useState": [Function],
+      },
+      "_element": <TodoItem
+        data={
+          Object {
+            "done": false,
+            "id": "id1",
+            "text": "text1",
+          }
+        }
+        deleteTodo={[MockFunction]}
+        toggleTodo={[MockFunction]}
+      />,
+      "_firstWorkInProgressHook": null,
+      "_forcedUpdate": false,
+      "_instance": [Circular],
+      "_isReRender": false,
+      "_newState": null,
+      "_numberOfReRenders": 0,
+      "_renderPhaseUpdates": null,
+      "_rendered": <div
+        className="todoItem"
+        data-test-id="todo-item"
+      >
+        <Checkbox
+          checked={false}
+          onDone={[Function]}
+        />
+        <span
+          className="text"
+        >
+          text1
+        </span>
+        <DeleteButton
+          onDelete={[Function]}
+        />
+      </div>,
+      "_rendering": false,
+      "_updater": [Circular],
+      "_workInProgressHook": null,
+    },
+  },
+}
+`;

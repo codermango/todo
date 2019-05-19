@@ -1,0 +1,18 @@
+.todoItem {
+  height: 50px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ededed;
+  cursor: all-scroll;
+}
+
+.todoItem:hover {
+  background-color: gray;
+}
+
+.text {
+  flex: 1;
+  padding: 0 10px;
+}
