@@ -23,3 +23,8 @@ npm run test
 ```
 npm run e2e
 ```
+
+## Lint
+```
+npm run lint
+```
