@@ -5,29 +5,29 @@
 
   <testsuite name="tests.index.test"
     errors="0" failures="0" hostname="" id="" package="tests" skipped="0"
-    tests="5" time="2.343" timestamp="">
+    tests="5" time="2.470" timestamp="">
   
-    <testcase name="Load the app" classname="tests.index.test" time="0.3640" assertions="1">
+    <testcase name="Load the app" classname="tests.index.test" time="0.3890" assertions="1">
 
     
     </testcase>
   
-    <testcase name="Add three items" classname="tests.index.test" time="0.2460" assertions="1">
+    <testcase name="Add three items" classname="tests.index.test" time="0.2410" assertions="1">
 
     
     </testcase>
   
-    <testcase name="Mark the first item as done" classname="tests.index.test" time="0.5820" assertions="1">
+    <testcase name="Mark the first item as done" classname="tests.index.test" time="0.5810" assertions="1">
 
     
     </testcase>
   
-    <testcase name="Delete the second item" classname="tests.index.test" time="0.5670" assertions="1">
+    <testcase name="Delete the second item" classname="tests.index.test" time="0.6790" assertions="1">
 
     
     </testcase>
   
-    <testcase name="Reload the app" classname="tests.index.test" time="0.5840" assertions="4">
+    <testcase name="Reload the app" classname="tests.index.test" time="0.5800" assertions="4">
 
     
 

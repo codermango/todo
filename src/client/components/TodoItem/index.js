@@ -15,17 +15,20 @@ class TodoItem extends Component {
     data: PropTypes.shape({
       text: PropTypes.string.isRequired,
       done: PropTypes.bool.isRequired
-    }).isRequired
+    }).isRequired,
+    draggable: PropTypes.bool.isRequired,
+    onDragStart: PropTypes.func.isRequired,
+    onDragOver: PropTypes.func.isRequired
   }
 
   handleDone = () => {
-    const { data = {}, toggleTodo } = this.props;
-    toggleTodo({ id: data.id });
+    const { data = {} } = this.props;
+    this.props.toggleTodo({ id: data.id });
   }
 
   handleDeleteTodo = () => {
-    const { data = {}, deleteTodo } = this.props;
-    deleteTodo({ id: data.id });
+    const { data = {} } = this.props;
+    this.props.deleteTodo({ id: data.id });
   }
 
   render() {
@@ -47,7 +50,7 @@ class TodoItem extends Component {
         <span className={styles.text}>{data.text}</span>
         <DeleteButton onDelete={this.handleDeleteTodo} />
       </div>
-    )
+    );
   }
 }
 

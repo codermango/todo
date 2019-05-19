@@ -15,20 +15,20 @@ describe('<TodoList />', () => {
   };
 
   it('renders correctly', () => {
-    const wrapper = shallow(<TodoList { ...props } />);
+    const wrapper = shallow(<TodoList {...props} />);
     const instance = wrapper.instance();
     expect(instance).toMatchSnapshot();
   });
 
   it('handleDragStart works correctly', () => {
-    const wrapper = shallow(<TodoList { ...props } />);
+    const wrapper = shallow(<TodoList {...props} />);
     const instance = wrapper.instance();
     instance.handleDragStart(0)(null);
     expect(instance.draggedItem).toEqual(props.todos[0]);
   });
 
   it('handleDragOver works correctly', () => {
-    const wrapper = shallow(<TodoList { ...props } />);
+    const wrapper = shallow(<TodoList {...props} />);
     const instance = wrapper.instance();
     instance.handleDragStart(0)(null);
     instance.handleDragOver(1)(null);

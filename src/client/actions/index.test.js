@@ -6,14 +6,14 @@ jest.mock('uuid/v4');
 
 describe('actions works correctly', () => {
   it('should create addTodo action', () => {
-    uuidv4.mockReturnValue('id')
+    uuidv4.mockReturnValue('id');
     const data = { text: 'text' };
     const expectedAction = {
       type: types.ADD_TODO,
       id: 'id',
       text: 'text'
-    }
-    expect(actions.addTodo(data)).toEqual(expectedAction)
+    };
+    expect(actions.addTodo(data)).toEqual(expectedAction);
   });
 
   it('should create deleteTodo action', () => {
@@ -45,7 +45,7 @@ describe('actions works correctly', () => {
     const data = [
       { id: 'id1', text: 'text1', done: false },
       { id: 'id2', text: 'text2', done: false },
-      { id: 'id3', text: 'text3', done: false },
+      { id: 'id3', text: 'text3', done: false }
     ];
     const expectedAction = {
       type: types.UPDATE_ALL,

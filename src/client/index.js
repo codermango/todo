@@ -1,6 +1,6 @@
-import React from "react";
-import { PersistGate } from 'redux-persist/integration/react'
-import ReactDOM from "react-dom";
+import React from 'react';
+import { PersistGate } from 'redux-persist/integration/react';
+import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import { combineReducers } from 'redux';
@@ -19,7 +19,7 @@ const combinedReducer = combineReducers({
 
 const persistConfig = {
   key: 'root',
-  storage,
+  storage
 };
 
 const persistedReducer = persistReducer(persistConfig, combinedReducer);
@@ -37,5 +37,5 @@ ReactDOM.hydrate(
       <App />
     </PersistGate>
   </Provider>,
-  document.getElementById("app")
+  document.getElementById('app')
 );

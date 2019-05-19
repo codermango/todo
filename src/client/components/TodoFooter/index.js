@@ -20,7 +20,7 @@ class TodoFooter extends Component {
       <div className={styles.todoFooter}>
         <button onClick={this.handleClearAll}>Clear All</button>
       </div>
-    )
+    );
   }
 }
 

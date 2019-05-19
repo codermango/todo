@@ -9,7 +9,7 @@ import styles from './styles.css';
 class TodoList extends Component {
 
   static propTypes = {
-    todos: PropTypes.array.isRequired,
+    todos: PropTypes.arrayOf(PropTypes.shape()).isRequired,
     updateAll: PropTypes.func.isRequired
   }
 
@@ -18,21 +18,21 @@ class TodoList extends Component {
     this.draggedItem = null;
   }
 
-  handleDragStart = (idx) => (e) => {
+  handleDragStart = idx => () => {
     const { todos = [] } = this.props;
     this.draggedItem = todos[idx];
   }
 
-  handleDragOver = (idx) => (e) => {
-    const { todos = [], updateAll } = this.props;
+  handleDragOver = idx => () => {
+    const { todos = [] } = this.props;
     const draggedOverItem = todos[idx];
     if (this.draggedItem.id === draggedOverItem.id) {
       return;
     }
 
-    let newTodos = todos.filter(todo => todo.id !== this.draggedItem.id);
+    const newTodos = todos.filter(todo => todo.id !== this.draggedItem.id);
     newTodos.splice(idx, 0, this.draggedItem);
-    updateAll({ todos: newTodos });
+    this.props.updateAll({ todos: newTodos });
   }
 
   render() {
@@ -44,7 +44,7 @@ class TodoList extends Component {
           <TodoItem
             key={todo.id}
             data={todo}
-            draggable={true}
+            draggable={Boolean(true)}
             onDragStart={this.handleDragStart(idx)}
             onDragOver={this.handleDragOver(idx)}
           />
@@ -56,7 +56,7 @@ class TodoList extends Component {
 
 const mapStateToProps = state => ({
   todos: state.todos
-})
+});
 
 const mapDispatchToProps = dispatch => ({
   updateAll: ({ todos }) => dispatch(updateAll({ todos }))

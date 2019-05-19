@@ -1,0 +1,19 @@
+{
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "max-len": [1, 120, 2, {"ignoreComments": true}]
+  },
+  "extends": ["./node_modules/codestyle/.react-eslintrc"],
+  "globals": {
+    "window": true,
+    "document": true
+  },
+  "settings": {
+    "react": {
+        "pragma": "React",
+        "version": "detect"
+    }
+}
+}

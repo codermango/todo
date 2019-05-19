@@ -5,7 +5,7 @@ import Checkbox from '../index';
 
 describe('<Checkbox />', () => {
   it('renders correctly', () => {
-    const wrapper = shallow(<Checkbox checked={false} onDone={jest.fn()}/>);
+    const wrapper = shallow(<Checkbox checked={false} onDone={jest.fn()} />);
     const instance = wrapper.html();
     expect(instance).toMatchSnapshot();
   });

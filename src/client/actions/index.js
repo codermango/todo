@@ -12,14 +12,14 @@ export function addTodo({ text }) {
     type: ADD_TODO,
     id: uuidv4(),
     text
-  }
+  };
 }
 
 export function deleteTodo({ id }) {
   return {
     type: DELETE_TODO,
     id
-  }
+  };
 }
 
 export function toggleTodo({ id }) {
@@ -39,5 +39,5 @@ export function updateAll({ todos }) {
   return {
     type: UPDATE_ALL,
     todos
-  }
+  };
 }

@@ -17,7 +17,7 @@ class TodoInput extends Component {
 
   handleKeyUp = (e) => {
     const { value } = this.state;
-    if(e.keyCode === 13 && value) { // Enter
+    if (e.keyCode === 13 && value) { // Enter
       this.props.addTodo({ text: this.state.value });
       this.setState({ value: '' });
     }
@@ -41,7 +41,7 @@ class TodoInput extends Component {
           data-test-id="todo-input"
         />
       </div>
-    )
+    );
   }
 }
 

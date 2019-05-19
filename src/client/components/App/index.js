@@ -15,7 +15,7 @@ class App extends Component {
         <TodoList />
         <TodoFooter />
       </div>
-    )
+    );
   }
 }
 

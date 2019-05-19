@@ -3,14 +3,14 @@ const todoItemXPath = `${todoListXPath}/div[@data-test-id="todo-item"]`;
 
 module.exports = {
 
-  'Load the app': browser => {
+  'Load the app': (browser) => {
     browser
       .url('http://localhost:3001')
       .useXpath()
       .waitForElementVisible('//input[@data-test-id="todo-input"]', 1000);
   },
 
-  'Add three items': browser => {
+  'Add three items': (browser) => {
     const theThirdTodoItemXPath = `${todoItemXPath}[3]`;
     browser
       .setValue('//input[@data-test-id="todo-input"]', 'test1')
@@ -22,15 +22,15 @@ module.exports = {
       .waitForElementVisible(theThirdTodoItemXPath, 500);
   },
 
-  'Mark the first item as done': browser => {
+  'Mark the first item as done': (browser) => {
     const theFirstCheckboxXPath = `${todoItemXPath}[1]/input[@data-test-id="checkbox"]`;
     browser
       .click(theFirstCheckboxXPath)
-      .pause(500)
+      .pause(500);
     browser.expect.element(theFirstCheckboxXPath).to.have.attribute('checked');
   },
 
-  'Delete the second item': browser => {
+  'Delete the second item': (browser) => {
     const theSecondDeleteButtonXPath = `${todoItemXPath}[2]/button[@data-test-id="delete-button"]`;
     browser
       .click(theSecondDeleteButtonXPath)
@@ -38,7 +38,7 @@ module.exports = {
     browser.expect.element(`${todoItemXPath}[span="test2"]`).to.not.be.present;
   },
 
-  'Reload the app': browser => {
+  'Reload the app': (browser) => {
     browser
       .refresh()
       .pause(500);

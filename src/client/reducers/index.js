@@ -6,12 +6,12 @@ import {
   UPDATE_ALL
 } from '../constants';
 
-const initialState = [
-  { id: 1, text: 'text1', done: false },
-  { id: 2, text: 'text2', done: false },
-  { id: 3, text: 'text3', done: false },
-  { id: 4, text: 'text4', done: false }
-];
+// const initialState = [
+//   { id: 1, text: 'text1', done: false },
+//   { id: 2, text: 'text2', done: false },
+//   { id: 3, text: 'text3', done: false },
+//   { id: 4, text: 'text4', done: false }
+// ];
 
 const todoReducer = (state = [], action) => {
   switch (action.type) {
@@ -27,16 +27,16 @@ const todoReducer = (state = [], action) => {
     case DELETE_TODO:
       return state.filter(todo => todo.id !== action.id);
     case TOGGLE_TODO:
-      return state.map(
-        todo => todo.id === action.id ? { ...todo, done: !todo.done } : todo
-      );
+      return state.map((todo) => {
+        return todo.id === action.id ? { ...todo, done: !todo.done } : todo;
+      });
     case CLEAR_ALL:
       return [];
     case UPDATE_ALL:
-      return action.todos
+      return action.todos;
     default:
       return state;
   }
-}
+};
 
 export default todoReducer;
